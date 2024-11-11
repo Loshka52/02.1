@@ -1,10 +1,10 @@
 fun main() {
     try {
         println("Введите строку для сжатия:")
-        val input = readLine() ?: throw IllegalArgumentException("Ввод не может быть пустым.")
+        val input = readLine() ?: throw IllegalArgumentException("Строка не может быть пустым.")
 
         if (input.isEmpty()) {
-            throw IllegalArgumentException("Ввод не может быть пустым.")
+            throw IllegalArgumentException("Строка не может быть пустым.")
         }
 
         val output = compressString(input)
@@ -32,7 +32,6 @@ fun compressString(input: String): String {
         }
     }
 
-    // Добавляем последний символ и его количество
     result.append(input[input.length - 1])
     if (count > 1) {
         result.append(count) // Добавляем количество, только если оно больше 1
