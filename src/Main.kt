@@ -1,10 +1,10 @@
 fun main() {
     try {
         println("Введите строку для сжатия:")
-        val input = readLine() ?: throw IllegalArgumentException("Строка не может быть пустым.")
+        val input = readLine() ?: throw IllegalArgumentException("Строка не может быть пустой.")
 
         if (input.isEmpty()) {
-            throw IllegalArgumentException("Строка не может быть пустым.")
+            throw IllegalArgumentException("Строка не может быть пустой.")
         }
 
         val output = compressString(input)
