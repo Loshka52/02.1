@@ -8,7 +8,7 @@ fun main() {
         }
 
         val output = compressString(input)
-        println("Результат сжатия: $output") // Выводим результат
+        println("Результат сжатия: $output") 
     } catch (e: IllegalArgumentException) {
         println("Ошибка: ${e.message}")
     } catch (e: Exception) {
@@ -26,15 +26,15 @@ fun compressString(input: String): String {
         } else {
             result.append(input[i - 1])
             if (count > 1) {
-                result.append(count) // Добавляем количество, только если оно больше 1
+                result.append(count) 
             }
-            count = 1 // Сбрасываем счетчик
+            count = 1 
         }
     }
 
     result.append(input[input.length - 1])
     if (count > 1) {
-        result.append(count) // Добавляем количество, только если оно больше 1
+        result.append(count) 
     }
 
     return result.toString()
